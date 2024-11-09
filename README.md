@@ -1,8 +1,19 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+- **User Authentication**: Secure sign up, login, and password recovery with Firebase Authentication.
+- **Password Recovery**: Forgot password functionality to reset your password.
+- **User Profile Management**: Edit profile information, including the profile picture.
+- **Real-time Chat**: Send and receive messages in real time.
+- **Image Sharing**: Upload and share images within the chat.
+- **Download Files**: Ability to download shared files/images.
+- **Firebase Storage**: All user data and media files (images, etc.) are stored securely in Firebase.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+
+- **Vite**: A fast and efficient build tool for modern web projects.
+- **React.js**: A JavaScript library for building user interfaces.
+- **Firebase Authentication**: For secure sign-up, login, and password reset functionality.
+- **Firebase Firestore**: For real-time database storage of chat messages.
+- **Firebase Storage**: For storing shared images and other media files.
