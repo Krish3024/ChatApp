@@ -3,7 +3,7 @@ import './LeftSidebar.css'
 import assets from './../../assets/assets';
 import { useNavigate } from 'react-router-dom';
 import { arrayUnion, collection, doc, getDoc, getDocs, query, serverTimestamp, setDoc, updateDoc, where } from 'firebase/firestore';
-import { db } from '../../config/firebase';
+import { db, logout } from '../../config/firebase';
 import { AppContext } from '../../context/AppContext';
 import { toast } from 'react-toastify';
 
@@ -99,7 +99,7 @@ const LeftSidebar = () => {
   }
 
   return (
-    <div className={`ls ${chatVisual?"hidden":""}`}>
+    <div className={`ls ${chatVisual ? "hidden" : ""}`}>
       <div className='ls-top'>
         <div className='ls-nav'>
           <img src={assets.logo} alt="logo" className='logo' />
@@ -108,7 +108,10 @@ const LeftSidebar = () => {
             <div className="sub-menu">
               <p onClick={() => navigate('/profile')}>Edit profile</p>
               <hr />
-              <p>Logout</p>
+              <p onClick={() => window.open('https://github.com/Krish3024', '_blank')}>Follow me</p>
+              <hr />
+              <p onClick={() => logout()}>Logout</p>
+
             </div>
           </div>
         </div>
@@ -135,6 +138,7 @@ const LeftSidebar = () => {
         }
       </div>
     </div>
+
   )
 }
 

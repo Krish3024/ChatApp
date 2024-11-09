@@ -16,12 +16,12 @@ const App = () => {
 
   useEffect(()=>{
     onAuthStateChanged(auth, async (user) => {
-      if(user) {
-        navigate('/chat')
-        await loadUserData(user.uid)
+      if(!user) {
+        navigate('/')
       }
       else{
-        navigate('/')
+        navigate('/chat')
+        await loadUserData(user.uid)
       }
     })
   },[])
