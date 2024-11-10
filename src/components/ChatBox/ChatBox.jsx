@@ -111,6 +111,7 @@ const ChatBox = () => {
     }
   },[messagesId])
 
+
   return chatUser ? (
     <div className={`chat-box ${chatVisual?"":"hidden"}`}>
       <div className="chat-user">
@@ -124,7 +125,8 @@ const ChatBox = () => {
         {messages.map((msg,index)=>(
           <div key={index} className={msg.sId === userData.id ? 's-msg' : 'r-msg'}>
             {msg["image"]
-            ? <img className='msg-img' src={msg.image} alt="" />
+            ? <img className='msg-img' src={msg.image} alt="" onClick={()=>window.open(msg.image)}
+            style={{ cursor: 'pointer' }}/>
             : <p className='msg'>{msg.text}</p>
           }
             

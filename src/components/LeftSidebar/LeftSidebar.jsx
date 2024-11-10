@@ -110,6 +110,8 @@ const LeftSidebar = () => {
               <hr />
               <p onClick={() => window.open('https://github.com/Krish3024', '_blank')}>Follow me</p>
               <hr />
+              <p onClick={() => window.open('https://video-call-n7au.vercel.app/', '_blank')}>Video Call</p>
+              <hr />
               <p onClick={() => logout()}>Logout</p>
 
             </div>
